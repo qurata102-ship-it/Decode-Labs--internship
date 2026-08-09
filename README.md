@@ -1,96 +1,101 @@
-📝 To-Do List Application
+# 💰 Expense Tracker
 
-A simple **Console-Based To-Do List Application** built with Python as part of my Python internship at **DECODE Labs**.
+A simple **Console-Based Expense Tracker** built with Python as part of my Python internship at **DECODE Labs**.
 
-The project allows users to add tasks to a list and display their complete To-Do List.
+The project allows users to enter multiple expense amounts and calculates the **Total Spent**.
 
-🚀 Features
+## 🚀 Features
 
-- ➕ Add new tasks
-- 📋 Store multiple tasks in a list
-- 👀 Display the complete To-Do List
+- 💵 Enter expense amounts
+- ➕ Add multiple expenses together
+- 📊 Calculate the total amount spent
 - 🖥️ Simple console-based interface
 
-🛠️ Technology Used
+## 🛠️ Technology Used
 
 - **Python 3**
 
-🧠 Concepts Practiced
+## 🧠 Concepts Practiced
 
 This project helped me practice fundamental Python concepts:
 
-- Lists
-- `append()`
 - Variables
 - `input()`
+- `float()`
 - `while` loops
-- `for` loops
-- `if` statements
+- Mathematical operations
+- Accumulators
 - User input
 - Basic data processing
 
- 🔄 How It Works
+## 🔄 How It Works
 
-The program first creates an empty list:
+The program starts the total at zero:
 
 ```python
-todo_list = []
+total = 0
 ````
 
-The user enters a task, which is stored in a variable:
+The user enters an expense amount:
 
 ```python
-new_task = input("Add new task: ")
+new_expense = float(input("Enter expense amount: "))
 ```
 
-The task is then added to the list using `append()`:
+The expense is then added to the running total:
 
 ```python
-todo_list.append(new_task)
+total = total + new_expense
 ```
 
-The user can continue adding tasks.
+The program continues accepting expenses until the user chooses to stop.
 
-After finishing, the program asks whether the user wants to view the To-Do List. If the user chooses `yes`, a `for` loop displays every task:
+Finally, it displays the total amount spent:
 
 ```python
-for task in todo_list:
-    print(task)
+print("Total Spent:", total)
 ```
 
- ▶️ How to Run
+## 📸 Output
+
+![Expense Tracker Output](output.png)
+
+## ▶️ How to Run
 
 Make sure Python is installed on your computer.
 
 Open the project folder in VS Code and run:
 
 ```bash
-python todo.py
+python expense_tracker.py
 ```
 
-The program will allow you to enter tasks and choose whether you want to view your complete To-Do List.
+Enter your expense amounts when prompted.
 
- 📌 Example
+## 📌 Example
 
 ```text
-Add new task: Study Python
-Add another? (yes or no): yes
+Enter expense amount: 100
+Add another expense? (yes or no): yes
 
-Add new task: Practice Git
-Add another? (yes or no): no
+Enter expense amount: 50
+Add another expense? (yes or no): yes
 
-Do you want to see your To-Do List? (yes or no): yes
+Enter expense amount: 20
+Add another expense? (yes or no): no
 
-Study Python
-Practice Git
+Total Spent: 170.0
 ```
 
- 🎯 Learning Objective
+## 🎯 Learning Objective
 
-The main objective of this project was to understand how Python **lists**, `append()`, loops, and user input can be used to build a simple task-management program.
+The main objective of this project was to understand **mathematical operations and accumulators** by continuously adding expense values and processing numerical data.
 
-👩‍💻 Internship Project
+## 👩‍💻 Internship Project
 
 **Python Internship — DECODE Labs**
 
 This project is part of my learning journey as a Python Intern, where I am developing practical projects to strengthen my programming and problem-solving skills.
+
+output is linked .s
+
